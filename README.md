@@ -1,19 +1,20 @@
-# 🏦 Legacy Banking Modernization
+🏦 Legacy Banking Modernization
 
-A simulated modernization of a mainframe banking system using **Java**, **Spring Boot**, **SQL**, **JCL Scripts**, **Docker**, and **GitHub Actions** CI/CD.
-
----
-
-## 🚀 Tech Stack
-- **Java 17**, **Spring Boot**
-- **SQL**, **Legacy JCL Scripts**
-- **Shell Scripts**
-- **Docker**
-- **GitHub Actions** (CI/CD)
+A simulated modernization of a mainframe banking system using **Java**, **Spring Boot**, **SQL**, **JCL Scripts**, **Docker**, and **GitHub Actions CI/CD**.  
+Designed for enterprises shifting from COBOL-based legacy systems to modern cloud-native applications.
 
 ---
 
-## 📂 Project Structure
+🚀 Tech Stack
+- Java 17, Spring Boot, Maven
+- SQL, Stored Procedures
+- Shell Scripts (JCL simulation)
+- Docker
+- GitHub Actions (CI/CD)
+
+---
+
+📂 Project Structure
 
 Legacy-Banking-Modernization/
 ├── backend-spring/
@@ -21,8 +22,8 @@ Legacy-Banking-Modernization/
 │ ├── pom.xml
 │ └── Dockerfile
 ├── sql/
-│ ├── procedures.sql
-│ └── schema.sql
+│ ├── schema.sql
+│ └── procedures.sql
 ├── legacy-jcl-scripts/
 │ ├── job1_interest_calc.sh
 │ └── job2_account_report.sh
@@ -30,33 +31,37 @@ Legacy-Banking-Modernization/
 │ └── build.yml
 └── README.md
 
----
-
-## 📦 Key Modules
-
-### 🔧 Backend – Spring Boot (Java)
-- RESTful API to manage accounts and trigger interest calculation
-- Uses `application.properties` to configure DB and port
-- Packaged using `Maven`, deployable via `Docker`
-
-### 🗃️ SQL Scripts
-- `schema.sql`: creates accounts and transactions tables
-- `procedures.sql`: includes stored procedure for applying interest
-
-### 🧾 Legacy JCL Scripts (Shell)
-- Simulate legacy batch jobs (like COBOL+JCL)
-- `job1_interest_calc.sh`: applies interest via API call
-- `job2_account_report.sh`: generates account report mock
-
-### 🔄 CI/CD – GitHub Actions
-- Automatically builds and tests Spring Boot app on each push
-- `build.yml` under `.github/workflows/` handles Maven build
+markdown
+Copy
+Edit
 
 ---
 
-## 🐳 Docker Support
+📦 Key Modules
 
-To build and run the backend locally using Docker:
+🔧 Backend – Spring Boot (Java)
+- RESTful APIs to manage accounts and simulate interest calculation
+- Configuration via `application.properties`
+- Built with `Maven` and containerized using `Docker`
+
+🗃️ SQL Scripts
+- `schema.sql`: Defines the `accounts` and `transactions` tables
+- `procedures.sql`: Contains a stored procedure to apply interest
+
+🧾 Legacy JCL Scripts (Shell)
+- Simulates JCL-style batch jobs using shell scripts
+- `job1_interest_calc.sh`: Calls the backend to apply interest
+- `job2_account_report.sh`: Simulates report generation from DB
+
+🔄 CI/CD – GitHub Actions
+- `build.yml` automates Maven build on push/pull requests to `main`
+- Ensures build integrity with every commit
+
+---
+
+🐳 Docker Support
+
+To build and run the backend:
 
 ```bash
 cd backend-spring
